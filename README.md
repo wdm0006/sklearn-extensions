@@ -17,7 +17,8 @@ directly in sklearn.  This is pretty much the wild west, test anything that uses
 Installation / Usage
 --------------------
 
-We aim to first support python 3, and will host the first operational version on pypi.
+We aim to first support python 3, and will host the first operational version on pypi. Note that the install here will
+install all underlying packages, and is therefore pretty big.  It is recommended that you do this in a virtualenv.
 
 Extensions Included So Far
 --------------------------
@@ -80,3 +81,6 @@ License
 
 In most cases, all that sklearn\_extensions does with external projects is import them. In those cases we add the license
 of the source project in its subdirectory just for safe-keeping. 
+
+All material specific to this project (specifically any docs, tests, examples or original code) is released under the 
+BSD 3-clause license. Any packages included in the bundle retain their original licences (as included in their subdirectories)

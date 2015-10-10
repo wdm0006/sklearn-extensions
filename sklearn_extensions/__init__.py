@@ -7,5 +7,6 @@ __all__ = [
     'latent_dirilecht_allocation',
     'metric_learning',
     'patsy_learn',
-    'sparse_filtering'
+    'sparse_filtering',
+    'pyculearn'
 ]
