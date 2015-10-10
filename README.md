@@ -29,6 +29,7 @@ Extensions Included So Far
  * [Latent Dirichlet Allocation](https://github.com/ariddell/lda)
  * [KModes](https://github.com/nicodv/kmodes)
  * [Patsy-Learn](https://github.com/amueller/patsylearn)
+ * [Pyculearn](https://github.com/predikto/pyculearn)
  
 TODO
 ----
