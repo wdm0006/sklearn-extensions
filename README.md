@@ -17,8 +17,12 @@ directly in sklearn.  This is pretty much the wild west, test anything that uses
 Installation / Usage
 --------------------
 
-We aim to first support python 3, and will host the first operational version on pypi. Note that the install here will
-install all underlying packages, and is therefore pretty big.  It is recommended that you do this in a virtualenv.
+We aim to first support python 3, and are hosted on pypi, so to install just:
+ 
+    pip install sklearn-extensions
+
+Note that the install here will install all underlying packages, and is therefore pretty big.  It is recommended that 
+you do this in a virtualenv.
 
 Extensions Included So Far
 --------------------------
@@ -31,6 +35,7 @@ Extensions Included So Far
  * [KModes](https://github.com/nicodv/kmodes)
  * [Patsy-Learn](https://github.com/amueller/patsylearn)
  * [Pyculearn](https://github.com/predikto/pyculearn)
+ * [Fuzzy K-Means](https://gist.github.com/mblondel/1451300)
  
 TODO
 ----
@@ -45,7 +50,6 @@ a great way to start is to add one of these.
  * [Simple MLP](https://gist.github.com/amueller/2061456)
  * [Non-negative Garotte](https://gist.github.com/agramfort/2351057)
  * [Kernel SGD](https://gist.github.com/mblondel/2573392)
- * [Fuzzy K-Means](https://gist.github.com/mblondel/1451300)
  * [Kernel K-Means](https://gist.github.com/mblondel/6230787)
  * [Non-Negative Least Squares](https://gist.github.com/mblondel/4421380)
  * [Non-Negative Matrix Factorization](https://gist.github.com/omangin/8801846)
@@ -56,6 +60,8 @@ a great way to start is to add one of these.
  * [Gaussian Processes](https://github.com/jmetzen/skgp)
  * [Pinch Ratio Clustering](https://github.com/rsbowman/sklearn-prc)
  
+If you have any more suggestions, please feel free to add them, or let me know and I will try to. 
+
 Contributing
 ------------
 
