@@ -1,0 +1,13 @@
+# Base Dependencies
+numpy>=1.9.0
+patsy>=0.4
+
+# Extensions
+git+https://github.com/jmetzen/kernel_regression.git
+git+https://github.com/jmetzen/sparse-filtering.git
+git+https://github.com/all-umass/metric-learn.git
+git+https://github.com/nicodv/kmodes.git
+git+https://github.com/amueller/patsylearn.git
+
+lda>=1.0.2
+sklearn-compiledtrees>=1.2
