@@ -82,9 +82,12 @@ There are two methods for adding extensions into sklearn\_extensions:
 If there is a package that is useful but does not comply with the sklearn API, feel free to include a wrapped version of
 it here as well, but include some tests.
 
-We intend to add a consolidated source of tests for the included packages here as well, but that has not been formalized 
-yet.
+A complete addition of a new package has a few components:
 
+ * Actual addition of package into sklearn\_extensions directory
+ * Documentation of the included transformers/predictors in the sklearn\_extensions docs
+ * An example or two (included in the aforementioned docs as well) in the examples directory
+ * A test or two, more if the source package has poor testing coverage
 
 License
 -------
