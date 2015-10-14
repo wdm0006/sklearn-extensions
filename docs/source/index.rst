@@ -24,7 +24,6 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   compiled_trees
    fuzzy_k_means
    kernel_regression
    kmodes

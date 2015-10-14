@@ -8,15 +8,6 @@ from sklearn.utils import check_random_state
 from sklearn.metrics.pairwise import euclidean_distances, manhattan_distances
 from sklearn.datasets.samples_generator import make_blobs
 
-##############################################################################
-# Generate sample data
-np.random.seed(0)
-
-batch_size = 45
-centers = [[1, 1], [-1, -1], [1, -1]]
-n_clusters = len(centers)
-X, labels_true = make_blobs(n_samples=1200, centers=centers, cluster_std=0.3)
-
 
 class KMeans(BaseEstimator):
 

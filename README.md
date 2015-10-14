@@ -33,7 +33,6 @@ Extensions Included So Far
 
  * [Kernel Regression](https://github.com/jmetzen/kernel_regression)
  * [Sparse Filtering](https://github.com/jmetzen/sparse-filtering)
- * [Compiled Trees](https://github.com/ajtulloch/sklearn-compiledtrees/)
  * [Metric Learning](https://github.com/all-umass/metric-learn.git)
  * [Latent Dirichlet Allocation](https://github.com/ariddell/lda)
  * [KModes](https://github.com/nicodv/kmodes)
@@ -45,7 +44,7 @@ TODO
 ----
 
 A number of packages have been identified but not yet added due to python 3 incompatibility, not being
-pip installable, or otherwise not trivial to add. If anyone would like to get involved with this project
+pip installable, or are otherwise just not yet added. If anyone would like to get involved with this project
 a great way to start is to add one of these.
 
  * [Extreme Learning Machines](https://github.com/dclambert/Python-ELM)
@@ -54,6 +53,7 @@ a great way to start is to add one of these.
  * [Simple MLP](https://gist.github.com/amueller/2061456)
  * [Non-negative Garotte](https://gist.github.com/agramfort/2351057)
  * [Kernel SGD](https://gist.github.com/mblondel/2573392)
+ * [Compiled Trees](https://github.com/ajtulloch/sklearn-compiledtrees/)
  * [Kernel K-Means](https://gist.github.com/mblondel/6230787)
  * [Non-Negative Least Squares](https://gist.github.com/mblondel/4421380)
  * [Non-Negative Matrix Factorization](https://gist.github.com/omangin/8801846)
@@ -63,24 +63,18 @@ a great way to start is to add one of these.
  * [Pegasos](https://github.com/ejlb/pegasos)
  * [Gaussian Processes](https://github.com/jmetzen/skgp)
  * [Pinch Ratio Clustering](https://github.com/rsbowman/sklearn-prc)
+ * [PCA Magic](https://github.com/allentran/pca-magic)
+ * [py-soft-impute](https://github.com/travisbrady/py-soft-impute)
  
 If you have any more suggestions, please feel free to add them, or let me know and I will try to. 
 
 Contributing
 ------------
 
-If you have an extension that you'd like to add, please submit a pull request and we can throw it in.  If modifications
-to a project are required, please continue development in the project's own repo rather than submit changes here. If a 
-project comes from a gist or some other snippet and therefore cannot be simply imported, then please create a new repo 
-which can be simply imported here.
-
-There are two methods for adding extensions into sklearn\_extensions:
-
- * If the extension is pip-installable, just add it to the requirements.txt file here, add a subdirectory for the new project, and import the relevant classes/methods
- * If the extension is not-pip installable, either make it so, or add the source into the subdirectory here directly. 
- 
-If there is a package that is useful but does not comply with the sklearn API, feel free to include a wrapped version of
-it here as well, but include some tests.
+If you have an extension that you'd like to add, please submit a pull request and we can throw it in.  A major benefit of
+this package is that we will aim to consolidate requirements among the disparate projects, therefore, for the sake of 
+management, the code for the projects will be replicated here. In the spirit of OSS, we will also aim to contribute any
+meaningful changes back to the original projects as well.
 
 A complete addition of a new package has a few components:
 
@@ -92,8 +86,8 @@ A complete addition of a new package has a few components:
 License
 -------
 
-In most cases, all that sklearn\_extensions does with external projects is import them. In those cases we add the license
-of the source project in its subdirectory just for safe-keeping. 
+In most cases, all that sklearn\_extensions does with external projects is include them. All of the projects will remain
+segregated into their own subdirectory, and will carry their original licenses in those subdirectories.
 
 All material specific to this project (specifically any docs, tests, examples or original code) is released under the 
 BSD 3-clause license. Any packages included in the bundle retain their original licences (as included in their subdirectories)

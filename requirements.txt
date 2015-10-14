@@ -8,7 +8,6 @@ pandas==0.17.0
 future==0.15.2
 
 # Extensions
-git+https://github.com/jmetzen/kernel_regression.git
 git+https://github.com/jmetzen/sparse-filtering.git
 git+https://github.com/all-umass/metric-learn.git
 git+https://github.com/nicodv/kmodes.git
