@@ -7,9 +7,10 @@ Scikit-Learn Extensions (sklearn_extensions) is a single source repository for e
 to compliment the slower more cautious approach of scikit-learn with regard to adding new predictors and modules, with a 
 separate pip-installable source for sklearn-compatible modules that may not meet those standards. 
 
-In particular, this project is interested in smaller one-off projects or even gists, rather than larger more established ones (such as pylearn2).
-Other than larger projects, we will shy away from projects with significant external dependencies (i.e. wrappers around 
-vowpal wabbit or xgboost), and rather prefer more python/numpy/scipy based projects. 
+In particular, this project is interested in smaller one-off projects, particularly even gists, rather than larger more 
+established ones (such as pylearn2, lifeline, or lightning). Other than larger projects, we will shy away from projects 
+with significant external dependencies (i.e. wrappers around vowpal wabbit or xgboost), and rather prefer more 
+python/numpy/scipy based projects. 
 
 Due to these guiding goals, the modules included here may not be as well tested, production ready, or stable as those included 
 directly in sklearn.  This is pretty much the wild west, test anything that uses this package heavily.
@@ -32,38 +33,29 @@ Extensions Included So Far
 --------------------------
 
  * [Kernel Regression](https://github.com/jmetzen/kernel_regression)
- * [Sparse Filtering](https://github.com/jmetzen/sparse-filtering)
- * [Metric Learning](https://github.com/all-umass/metric-learn.git)
- * [Latent Dirichlet Allocation](https://github.com/ariddell/lda)
- * [KModes](https://github.com/nicodv/kmodes)
- * [Patsy-Learn](https://github.com/amueller/patsylearn)
- * [Pyculearn](https://github.com/predikto/pyculearn)
  * [Fuzzy K-Means](https://gist.github.com/mblondel/1451300)
+ * [Sparse Filtering](https://github.com/jmetzen/sparse-filtering)
+ * [Extreme Learning Machines](https://github.com/dclambert/Python-ELM)
+ * [Non-negative Garotte](https://gist.github.com/agramfort/2351057)
  
 TODO
 ----
 
-A number of packages have been identified but not yet added due to python 3 incompatibility, not being
-pip installable, or are otherwise just not yet added. If anyone would like to get involved with this project
-a great way to start is to add one of these.
+A number of packages have been identified but not been added yet. As a general rule for identifying potential projects 
+to add to sklearn-extensions, if it cannot be pip-installed: it may be a candidate here
 
- * [Extreme Learning Machines](https://github.com/dclambert/Python-ELM)
  * [Optimal Path Forest Classifiers](https://github.com/LibOPF/LibOPF)
  * [Random Output Trees](https://github.com/arjoly/random-output-trees)
  * [Simple MLP](https://gist.github.com/amueller/2061456)
- * [Non-negative Garotte](https://gist.github.com/agramfort/2351057)
  * [Kernel SGD](https://gist.github.com/mblondel/2573392)
- * [Compiled Trees](https://github.com/ajtulloch/sklearn-compiledtrees/)
  * [Kernel K-Means](https://gist.github.com/mblondel/6230787)
  * [Non-Negative Least Squares](https://gist.github.com/mblondel/4421380)
  * [Non-Negative Matrix Factorization](https://gist.github.com/omangin/8801846)
  * [K-means Feature Mapper](https://gist.github.com/larsmans/5996074)
  * [NMF via Coordinate Descent](https://gist.github.com/mblondel/09648344984565f9477a)
- * [HDBSCAN](https://github.com/lmcinnes/hdbscan)
  * [Pegasos](https://github.com/ejlb/pegasos)
  * [Gaussian Processes](https://github.com/jmetzen/skgp)
  * [Pinch Ratio Clustering](https://github.com/rsbowman/sklearn-prc)
- * [PCA Magic](https://github.com/allentran/pca-magic)
  * [py-soft-impute](https://github.com/travisbrady/py-soft-impute)
  
 If you have any more suggestions, please feel free to add them, or let me know and I will try to. 

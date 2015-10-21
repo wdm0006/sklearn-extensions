@@ -9,10 +9,3 @@ future==0.15.2
 
 # Extensions
 git+https://github.com/jmetzen/sparse-filtering.git
-git+https://github.com/all-umass/metric-learn.git
-git+https://github.com/nicodv/kmodes.git
-git+https://github.com/amueller/patsylearn.git
-git+https://github.com/predikto/pyculearn.git
-
-lda>=1.0.2
-sklearn-compiledtrees>=1.2
