@@ -37,6 +37,7 @@ Extensions Included So Far
  * [Sparse Filtering](https://github.com/jmetzen/sparse-filtering)
  * [Extreme Learning Machines](https://github.com/dclambert/Python-ELM)
  * [Non-negative Garotte](https://gist.github.com/agramfort/2351057)
+ * [Kernel SGD](https://gist.github.com/mblondel/2573392)
  
 TODO
 ----
@@ -47,7 +48,6 @@ to add to sklearn-extensions, if it cannot be pip-installed: it may be a candida
  * [Optimal Path Forest Classifiers](https://github.com/LibOPF/LibOPF)
  * [Random Output Trees](https://github.com/arjoly/random-output-trees)
  * [Simple MLP](https://gist.github.com/amueller/2061456)
- * [Kernel SGD](https://gist.github.com/mblondel/2573392)
  * [Kernel K-Means](https://gist.github.com/mblondel/6230787)
  * [Non-Negative Least Squares](https://gist.github.com/mblondel/4421380)
  * [Non-Negative Matrix Factorization](https://gist.github.com/omangin/8801846)

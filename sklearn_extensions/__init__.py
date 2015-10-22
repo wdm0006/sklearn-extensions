@@ -5,5 +5,6 @@ __all__ = [
     'sparse_filtering',
     'extreme_learning_machines',
     'fuzzy_kmeans',
-    'non_negative_garotte'
+    'non_negative_garotte',
+    'kernel_sgd'
 ]
