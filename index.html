@@ -1,137 +1,351 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Welcome to sklearn-extensions’s documentation! &mdash; sklearn-extensions 0.0.1 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="sklearn-extensions 0.0.1 documentation" href="#" />
-    <link rel="next" title="Compiled Trees" href="compiled_trees.html" /> 
-  </head>
-  <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="compiled_trees.html" title="Compiled Trees"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">sklearn-extensions 0.0.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to sklearn-extensions’s documentation! &mdash; sklearn-extensions 0.0.2 documentation</title>
+  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="sklearn-extensions 0.0.2 documentation" href="#"/>
+        <link rel="next" title="Fuzzy K-Means" href="fuzzy_k_means.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> sklearn-extensions
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="fuzzy_k_means.html">Fuzzy K-Means</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_regression.html">Kernel Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse_filtering.html">Sparse Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extreme_learning_machines.html">Extreme Learning Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_sgd.html">Kernel SGD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="non_negative_garotte.html">Non Negative Garotte</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">sklearn-extensions</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Welcome to sklearn-extensions&#8217;s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="welcome-to-sklearn-extensions-s-documentation">
 <h1>Welcome to sklearn-extensions&#8217;s documentation!<a class="headerlink" href="#welcome-to-sklearn-extensions-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Scikit-Learn Extensions (sklearn_extensions) is a single source repository for extensions to <a class="reference external" href="https://github.com/sklearn/sklearn">scikit-learn</a> . It is intended
+<p>Scikit-Learn Extensions (sklearn_extensions) is a single source repository for extensions to [scikit-learn](<a class="reference external" href="https://github.com/sklearn/sklearn">https://github.com/sklearn/sklearn</a>). It is intended
 to compliment the slower more cautious approach of scikit-learn with regard to adding new predictors and modules, with a
 separate pip-installable source for sklearn-compatible modules that may not meet those standards.</p>
-<p>In particular, this project is interested in smaller one-off projects or even gists, rather than larger more established ones (such as pylearn2).
-Other than larger projects, we will shy away from projects with significant external dependencies (i.e. wrappers around
-vowpal wabbit or xgboost), and rather prefer more python/numpy/scipy based projects.</p>
+<p>In particular, this project is interested in smaller one-off projects, particularly even gists, rather than larger more
+established ones (such as pylearn2, lifeline, or lightning). Other than larger projects, we will shy away from projects
+with significant external dependencies (i.e. wrappers around vowpal wabbit or xgboost), and rather prefer more
+python/numpy/scipy based projects.</p>
 <p>Due to these guiding goals, the modules included here may not be as well tested, production ready, or stable as those included
 directly in sklearn.  This is pretty much the wild west, test anything that uses this package heavily.</p>
-<p>Below is an index of the included packages, many of which have their own documentation.</p>
+<div class="section" id="installation-usage">
+<h2>Installation / Usage<a class="headerlink" href="#installation-usage" title="Permalink to this headline">¶</a></h2>
+<p>We aim to first support python 3, and are hosted on pypi, so to install just:</p>
+<blockquote>
+<div>pip install sklearn-extensions</div></blockquote>
+<p>Note that the install here will install all underlying packages, and is therefore pretty big.  It is recommended that
+you do this in a virtualenv.</p>
+</div>
+<div class="section" id="extensions-included-so-far">
+<h2>Extensions Included So Far<a class="headerlink" href="#extensions-included-so-far" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/jmetzen/kernel_regression">Kernel Regression</a></dt>
+<dd><ul class="first last simple">
+<li>kernel_regression.KernelRegression()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://gist.github.com/mblondel/1451300">Fuzzy K-Means</a></dt>
+<dd><ul class="first last simple">
+<li>fuzzy_kmeans.KMeans()</li>
+<li>fuzzy_kmeans.KMedians()</li>
+<li>fuzzy_kmeans.FuzzyKMeans()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/jmetzen/sparse-filtering">Sparse Filtering</a></dt>
+<dd><ul class="first last simple">
+<li>sparse_filtering.SparseFiltering()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://github.com/dclambert/Python-ELM">Extreme Learning Machines</a></dt>
+<dd><ul class="first last simple">
+<li>extreme_learning_machines.ELMRegressor()</li>
+<li>extreme_learning_machines.ELMClassifier()</li>
+<li>extreme_learning_machines.GenELMRegressor()</li>
+<li>extreme_learning_machines.GenELMClassifier()</li>
+<li>extreme_learning_machines.RandomLayer()</li>
+<li>extreme_learning_machines.GRBFRandomLayer()</li>
+<li>extreme_learning_machines.RBFRandomLayer()</li>
+<li>extreme_learning_machines.MLPRandomLayer()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://gist.github.com/agramfort/2351057">Non-negative Garotte</a></dt>
+<dd><ul class="first last simple">
+<li>non_negative_garotte.NonNegativeGarrote()</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://gist.github.com/mblondel/2573392">Kernel SGD</a></dt>
+<dd><ul class="first last simple">
+<li>kernel_sgd.HingeLoss()</li>
+<li>kernel_sgd.KernelSGD()</li>
+<li>kernel_sgd.GaussianKernel()</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<p>A number of packages have been identified but not been added yet. As a general rule for identifying potential projects
+to add to sklearn-extensions, if it cannot be pip-installed: it may be a candidate here</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://github.com/LibOPF/LibOPF">Optimal Path Forest Classifiers</a></li>
+<li><a class="reference external" href="https://github.com/arjoly/random-output-trees">Random Output Trees</a></li>
+<li><a class="reference external" href="https://gist.github.com/amueller/2061456">Simple MLP</a></li>
+<li><a class="reference external" href="https://gist.github.com/mblondel/6230787">Kernel K-Means</a></li>
+<li><a class="reference external" href="https://gist.github.com/mblondel/4421380">Non-Negative Least Squares</a></li>
+<li><a class="reference external" href="https://gist.github.com/omangin/8801846">Non-Negative Matrix Factorization</a></li>
+<li><a class="reference external" href="https://gist.github.com/larsmans/5996074">K-means Feature Mapper</a></li>
+<li><a class="reference external" href="https://gist.github.com/mblondel/09648344984565f9477a">NMF via Coordinate Descent</a></li>
+<li><a class="reference external" href="https://github.com/ejlb/pegasos">Pegasos</a></li>
+<li><a class="reference external" href="https://github.com/jmetzen/skgp">Gaussian Processes</a></li>
+<li><a class="reference external" href="https://github.com/rsbowman/sklearn-prc">Pinch Ratio Clustering</a></li>
+<li><a class="reference external" href="https://github.com/travisbrady/py-soft-impute">py-soft-impute</a></li>
+</ul>
+</div></blockquote>
+<p>If you have any more suggestions, please feel free to add them, or let me know and I will try to.</p>
+</div>
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>If you have an extension that you&#8217;d like to add, please submit a pull request and we can throw it in.  A major benefit of
+this package is that we will aim to consolidate requirements among the disparate projects, therefore, for the sake of
+management, the code for the projects will be replicated here. In the spirit of OSS, we will also aim to contribute any
+meaningful changes back to the original projects as well.</p>
+<p>A complete addition of a new package has a few components:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Actual addition of package into sklearn_extensions directory</li>
+<li>Documentation of the included transformers/predictors in the sklearn_extensions docs</li>
+<li>An example or two (included in the aforementioned docs as well) in the examples directory</li>
+<li>A test or two, more if the source package has poor testing coverage</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>In most cases, all that sklearn_extensions does with external projects is include them. All of the projects will remain
+segregated into their own subdirectory, and will carry their original licenses in those subdirectories.</p>
+<p>All material specific to this project (specifically any docs, tests, examples or original code) is released under the
+BSD 3-clause license. Any packages included in the bundle retain their original licences (as included in thir subdirectories)</p>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="compiled_trees.html">Compiled Trees</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fuzzy_k_means.html">Fuzzy K-Means</a></li>
 <li class="toctree-l1"><a class="reference internal" href="kernel_regression.html">Kernel Regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="kmodes.html">KModes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="latent_dirichlet_allocation.html">Latent Dirichlet Allocation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="metric_learning.html">Metric Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="patsy_learn.html">Patsy Learn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pyculearn.html">Pyculearn</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sparse_filtering.html">Sparse Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extreme_learning_machines.html">Extreme Learning Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_sgd.html">Kernel SGD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="non_negative_garotte.html">Non Negative Garotte</a></li>
 </ul>
+</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
 </ul>
 </div>
 
 
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Welcome to sklearn-extensions&#8217;s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fuzzy_k_means.html" class="btn btn-neutral float-right" title="Fuzzy K-Means" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
 
-  <h4>Next topic</h4>
-  <p class="topless"><a href="compiled_trees.html"
-                        title="next chapter">Compiled Trees</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Will McGinnis.
+
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="compiled_trees.html" title="Compiled Trees"
-             >next</a> |</li>
-        <li><a href="#">sklearn-extensions 0.0.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2015, Will McGinnis.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>
