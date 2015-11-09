@@ -15,7 +15,7 @@ python/numpy/scipy based projects.
 Due to these guiding goals, the modules included here may not be as well tested, production ready, or stable as those included 
 directly in sklearn.  This is pretty much the wild west, test anything that uses this package heavily.
 
-Docs to be at: 
+Full documentation at: 
 
 [http://wdm0006.github.io/sklearn-extensions](http://wdm0006.github.io/sklearn-extensions)
 
