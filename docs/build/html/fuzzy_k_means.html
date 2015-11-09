@@ -1,132 +1,280 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Fuzzy K-Means &mdash; sklearn-extensions 0.0.1 documentation</title>
-    
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.0.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="sklearn-extensions 0.0.1 documentation" href="index.html" />
-    <link rel="next" title="Kernel Regression" href="kernel_regression.html" />
-    <link rel="prev" title="Compiled Trees" href="compiled_trees.html" /> 
-  </head>
-  <body>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="kernel_regression.html" title="Kernel Regression"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="compiled_trees.html" title="Compiled Trees"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">sklearn-extensions 0.0.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>  
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fuzzy K-Means &mdash; sklearn-extensions 0.0.2 documentation</title>
+  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="sklearn-extensions 0.0.2 documentation" href="index.html"/>
+        <link rel="next" title="Kernel Regression" href="kernel_regression.html"/>
+        <link rel="prev" title="Welcome to sklearn-extensions’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sklearn-extensions
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Fuzzy K-Means</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-docs">Third Party Docs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_regression.html">Kernel Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse_filtering.html">Sparse Filtering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extreme_learning_machines.html">Extreme Learning Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_sgd.html">Kernel SGD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="non_negative_garotte.html">Non Negative Garotte</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sklearn-extensions</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Fuzzy K-Means</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/fuzzy_k_means.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="fuzzy-k-means">
 <h1>Fuzzy K-Means<a class="headerlink" href="#fuzzy-k-means" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>N/A</p>
+<p>The fuzzy k-means module has 3 seperate models that can be imported as:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sklearn_extensions</span> <span class="kn">as</span> <span class="nn">ske</span>
+
+<span class="n">mdl</span> <span class="o">=</span> <span class="n">ske</span><span class="o">.</span><span class="n">fuzzy_kmeans</span><span class="o">.</span><span class="n">FuzzyKMeans</span><span class="p">()</span>
+<span class="n">mdl</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">mdl</span> <span class="o">=</span> <span class="n">ske</span><span class="o">.</span><span class="n">fuzzy_kmeans</span><span class="o">.</span><span class="n">KMeans</span><span class="p">()</span>
+<span class="n">mdl</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">mdl</span> <span class="o">=</span> <span class="n">ske</span><span class="o">.</span><span class="n">fuzzy_kmeans</span><span class="o">.</span><span class="n">KMedians</span><span class="p">()</span>
+<span class="n">mdl</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<p>N/A</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn_extensions.fuzzy_kmeans</span> <span class="kn">import</span> <span class="n">KMedians</span><span class="p">,</span> <span class="n">FuzzyKMeans</span><span class="p">,</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets.samples_generator</span> <span class="kn">import</span> <span class="n">make_blobs</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="n">centers</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">n_clusters</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">centers</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">labels_true</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="n">centers</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">kmedians</span> <span class="o">=</span> <span class="n">KMedians</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">kmedians</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">fuzzy_kmeans</span> <span class="o">=</span> <span class="n">FuzzyKMeans</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fuzzy_kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;KMEANS&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;KMEDIANS&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">kmedians</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;FUZZY_KMEANS&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">fuzzy_kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Yields the result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">KMEANS</span>
+<span class="p">[[</span> <span class="mf">0.74279904</span>  <span class="mf">0.94377717</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">1.22177014</span>  <span class="mf">1.00196511</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.00873034</span> <span class="o">-</span><span class="mf">0.99593489</span><span class="p">]]</span>
+<span class="n">KMEDIANS</span>
+<span class="p">[[</span> <span class="mf">0.99538235</span> <span class="o">-</span><span class="mf">1.01070379</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.96275935</span>  <span class="mf">0.98959938</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.97974863</span> <span class="o">-</span><span class="mf">0.99788949</span><span class="p">]]</span>
+<span class="n">FUZZY_KMEANS</span>
+<span class="p">[[</span> <span class="mf">0.98642164</span> <span class="o">-</span><span class="mf">1.0000844</span> <span class="p">]</span>
+ <span class="p">[</span> <span class="mf">0.97111065</span>  <span class="mf">0.99339691</span><span class="p">]</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">0.98862482</span> <span class="o">-</span><span class="mf">0.99082696</span><span class="p">]]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="third-party-docs">
 <h2>Third Party Docs<a class="headerlink" href="#third-party-docs" title="Permalink to this headline">¶</a></h2>
-<p>N/A</p>
+<p>The original unmodified version of this module&#8217;s code can be found here: <a class="reference external" href="https://gist.github.com/mblondel/1451300">Fuzzy K-Means</a></p>
 </div>
 </div>
 
 
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Fuzzy K-Means</a><ul>
-<li><a class="reference internal" href="#usage">Usage</a></li>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-<li><a class="reference internal" href="#third-party-docs">Third Party Docs</a></li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kernel_regression.html" class="btn btn-neutral float-right" title="Kernel Regression" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to sklearn-extensions’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="compiled_trees.html"
-                        title="previous chapter">Compiled Trees</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="kernel_regression.html"
-                        title="next chapter">Kernel Regression</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/fuzzy_k_means.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Will McGinnis.
+
     </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="kernel_regression.html" title="Kernel Regression"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="compiled_trees.html" title="Compiled Trees"
-             >previous</a> |</li>
-        <li><a href="index.html">sklearn-extensions 0.0.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2015, Will McGinnis.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
 </html>

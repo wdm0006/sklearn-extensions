@@ -1,7 +1,7 @@
 Scikit-Learn Extensions
 =======================
 
-v0.0.1
+v0.0.2
 
 Scikit-Learn Extensions (sklearn_extensions) is a single source repository for extensions to [scikit-learn](https://github.com/sklearn/sklearn). It is intended
 to compliment the slower more cautious approach of scikit-learn with regard to adding new predictors and modules, with a 
@@ -33,11 +33,28 @@ Extensions Included So Far
 --------------------------
 
  * [Kernel Regression](https://github.com/jmetzen/kernel_regression)
+    * kernel_regression.KernelRegression()
  * [Fuzzy K-Means](https://gist.github.com/mblondel/1451300)
+    * fuzzy_kmeans.KMeans()
+    * fuzzy_kmeans.KMedians()
+    * fuzzy_kmeans.FuzzyKMeans()
  * [Sparse Filtering](https://github.com/jmetzen/sparse-filtering)
+    * sparse_filtering.SparseFiltering()
  * [Extreme Learning Machines](https://github.com/dclambert/Python-ELM)
+    * extreme_learning_machines.ELMRegressor()
+    * extreme_learning_machines.ELMClassifier()
+    * extreme_learning_machines.GenELMRegressor()
+    * extreme_learning_machines.GenELMClassifier()
+    * extreme_learning_machines.RandomLayer()
+    * extreme_learning_machines.GRBFRandomLayer()
+    * extreme_learning_machines.RBFRandomLayer()
+    * extreme_learning_machines.MLPRandomLayer()
  * [Non-negative Garotte](https://gist.github.com/agramfort/2351057)
+    * non_negative_garotte.NonNegativeGarrote()
  * [Kernel SGD](https://gist.github.com/mblondel/2573392)
+    * kernel_sgd.HingeLoss()
+    * kernel_sgd.KernelSGD()
+    * kernel_sgd.GaussianKernel()
  
 TODO
 ----

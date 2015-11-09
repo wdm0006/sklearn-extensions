@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Extreme Learning Machines &mdash; sklearn-extensions 0.0.2 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="sklearn-extensions 0.0.2 documentation" href="index.html"/>
+        <link rel="next" title="Kernel SGD" href="kernel_sgd.html"/>
+        <link rel="prev" title="Sparse Filtering" href="sparse_filtering.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sklearn-extensions
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fuzzy_k_means.html">Fuzzy K-Means</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_regression.html">Kernel Regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse_filtering.html">Sparse Filtering</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Extreme Learning Machines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#third-party-docs">Third Party Docs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="kernel_sgd.html">Kernel SGD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="non_negative_garotte.html">Non Negative Garotte</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sklearn-extensions</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Extreme Learning Machines</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/extreme_learning_machines.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="extreme-learning-machines">
+<h1>Extreme Learning Machines<a class="headerlink" href="#extreme-learning-machines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The extreme learning machines module ships with a large number of estimators and helper classes for building these
+estimators:</p>
+<blockquote>
+<div><ul class="simple">
+<li>extreme_learning_machines.ELMRegressor()</li>
+<li>extreme_learning_machines.ELMClassifier()</li>
+<li>extreme_learning_machines.GenELMRegressor()</li>
+<li>extreme_learning_machines.GenELMClassifier()</li>
+<li>extreme_learning_machines.RandomLayer()</li>
+<li>extreme_learning_machines.GRBFRandomLayer()</li>
+<li>extreme_learning_machines.RBFRandomLayer()</li>
+<li>extreme_learning_machines.MLPRandomLayer()</li>
+</ul>
+</div></blockquote>
+<p>For a detailed example, see below.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>An example comparing various ELM models.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_moons</span><span class="p">,</span> <span class="n">make_circles</span><span class="p">,</span> <span class="n">make_classification</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="kn">from</span> <span class="nn">sklearn_extensions.extreme_learning_machines.elm</span> <span class="kn">import</span> <span class="n">GenELMClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn_extensions.extreme_learning_machines.random_layer</span> <span class="kn">import</span> <span class="n">RBFRandomLayer</span><span class="p">,</span> <span class="n">MLPRandomLayer</span>
+
+
+<span class="k">def</span> <span class="nf">make_datasets</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="n">make_moons</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+            <span class="n">make_circles</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">make_linearly_separable</span><span class="p">()]</span>
+
+
+<span class="k">def</span> <span class="nf">make_classifiers</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;ELM(10,tanh)&quot;</span><span class="p">,</span> <span class="s">&quot;ELM(10,tanh,LR)&quot;</span><span class="p">,</span> <span class="s">&quot;ELM(10,sinsq)&quot;</span><span class="p">,</span> <span class="s">&quot;ELM(10,tribas)&quot;</span><span class="p">,</span> <span class="s">&quot;ELM(hardlim)&quot;</span><span class="p">,</span> <span class="s">&quot;ELM(20,rbf(0.1))&quot;</span><span class="p">]</span>
+
+    <span class="n">nh</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="c"># pass user defined transfer func</span>
+    <span class="n">sinsq</span> <span class="o">=</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mf">2.0</span><span class="p">))</span>
+    <span class="n">srhl_sinsq</span> <span class="o">=</span> <span class="n">MLPRandomLayer</span><span class="p">(</span><span class="n">n_hidden</span><span class="o">=</span><span class="n">nh</span><span class="p">,</span> <span class="n">activation_func</span><span class="o">=</span><span class="n">sinsq</span><span class="p">)</span>
+
+    <span class="c"># use internal transfer funcs</span>
+    <span class="n">srhl_tanh</span> <span class="o">=</span> <span class="n">MLPRandomLayer</span><span class="p">(</span><span class="n">n_hidden</span><span class="o">=</span><span class="n">nh</span><span class="p">,</span> <span class="n">activation_func</span><span class="o">=</span><span class="s">&#39;tanh&#39;</span><span class="p">)</span>
+    <span class="n">srhl_tribas</span> <span class="o">=</span> <span class="n">MLPRandomLayer</span><span class="p">(</span><span class="n">n_hidden</span><span class="o">=</span><span class="n">nh</span><span class="p">,</span> <span class="n">activation_func</span><span class="o">=</span><span class="s">&#39;tribas&#39;</span><span class="p">)</span>
+    <span class="n">srhl_hardlim</span> <span class="o">=</span> <span class="n">MLPRandomLayer</span><span class="p">(</span><span class="n">n_hidden</span><span class="o">=</span><span class="n">nh</span><span class="p">,</span> <span class="n">activation_func</span><span class="o">=</span><span class="s">&#39;hardlim&#39;</span><span class="p">)</span>
+
+    <span class="c"># use gaussian RBF</span>
+    <span class="n">srhl_rbf</span> <span class="o">=</span> <span class="n">RBFRandomLayer</span><span class="p">(</span><span class="n">n_hidden</span><span class="o">=</span><span class="n">nh</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">rbf_width</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">log_reg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">()</span>
+
+    <span class="n">classifiers</span> <span class="o">=</span> <span class="p">[</span><span class="n">GenELMClassifier</span><span class="p">(</span><span class="n">hidden_layer</span><span class="o">=</span><span class="n">srhl_tanh</span><span class="p">),</span>
+                   <span class="n">GenELMClassifier</span><span class="p">(</span><span class="n">hidden_layer</span><span class="o">=</span><span class="n">srhl_tanh</span><span class="p">,</span> <span class="n">regressor</span><span class="o">=</span><span class="n">log_reg</span><span class="p">),</span>
+                   <span class="n">GenELMClassifier</span><span class="p">(</span><span class="n">hidden_layer</span><span class="o">=</span><span class="n">srhl_sinsq</span><span class="p">),</span>
+                   <span class="n">GenELMClassifier</span><span class="p">(</span><span class="n">hidden_layer</span><span class="o">=</span><span class="n">srhl_tribas</span><span class="p">),</span>
+                   <span class="n">GenELMClassifier</span><span class="p">(</span><span class="n">hidden_layer</span><span class="o">=</span><span class="n">srhl_hardlim</span><span class="p">),</span>
+                   <span class="n">GenELMClassifier</span><span class="p">(</span><span class="n">hidden_layer</span><span class="o">=</span><span class="n">srhl_rbf</span><span class="p">)]</span>
+
+    <span class="k">return</span> <span class="n">names</span><span class="p">,</span> <span class="n">classifiers</span>
+
+
+<span class="k">def</span> <span class="nf">make_linearly_separable</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    :return:</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_classification</span><span class="p">(</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_redundant</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_informative</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_clusters_per_class</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">+=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="c"># generate some datasets</span>
+    <span class="n">datasets</span> <span class="o">=</span> <span class="n">make_datasets</span><span class="p">()</span>
+    <span class="n">names</span><span class="p">,</span> <span class="n">classifiers</span> <span class="o">=</span> <span class="n">make_classifiers</span><span class="p">()</span>
+
+    <span class="c"># iterate over datasets</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">ds</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">datasets</span><span class="p">):</span>
+        <span class="c"># pre-process dataset, split into training and test part</span>
+        <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">ds</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">y_test</span> <span class="o">=</span> <span class="n">y_test</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
+        <span class="n">y_train</span> <span class="o">=</span> <span class="n">y_train</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
+
+        <span class="c"># iterate over classifiers</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&#39;Dataset: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="p">))</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">clf</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">classifiers</span><span class="p">):</span>
+            <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+            <span class="n">score</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&#39;Model </span><span class="si">%s</span><span class="s"> score: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Which yields the output:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Dataset: 0
+Model ELM<span class="o">(</span>10,tanh<span class="o">)</span> score: 0.9125
+Model ELM<span class="o">(</span>10,tanh,LR<span class="o">)</span> score: 0.8875
+Model ELM<span class="o">(</span>10,sinsq<span class="o">)</span> score: 0.7875
+Model ELM<span class="o">(</span>10,tribas<span class="o">)</span> score: 0.8
+Model ELM<span class="o">(</span>hardlim<span class="o">)</span> score: 0.825
+Model ELM<span class="o">(</span>20,rbf<span class="o">(</span>0.1<span class="o">))</span> score: 0.9
+
+Dataset: 1
+Model ELM<span class="o">(</span>10,tanh<span class="o">)</span> score: 0.8375
+Model ELM<span class="o">(</span>10,tanh,LR<span class="o">)</span> score: 0.7125
+Model ELM<span class="o">(</span>10,sinsq<span class="o">)</span> score: 0.9
+Model ELM<span class="o">(</span>10,tribas<span class="o">)</span> score: 0.725
+Model ELM<span class="o">(</span>hardlim<span class="o">)</span> score: 0.7875
+Model ELM<span class="o">(</span>20,rbf<span class="o">(</span>0.1<span class="o">))</span> score: 0.9375
+
+Dataset: 2
+Model ELM<span class="o">(</span>10,tanh<span class="o">)</span> score: 0.9125
+Model ELM<span class="o">(</span>10,tanh,LR<span class="o">)</span> score: 0.875
+Model ELM<span class="o">(</span>10,sinsq<span class="o">)</span> score: 0.85
+Model ELM<span class="o">(</span>10,tribas<span class="o">)</span> score: 0.8125
+Model ELM<span class="o">(</span>hardlim<span class="o">)</span> score: 0.9
+Model ELM<span class="o">(</span>20,rbf<span class="o">(</span>0.1<span class="o">))</span> score: 0.9125
+</pre></div>
+</div>
+</div>
+<div class="section" id="third-party-docs">
+<h2>Third Party Docs<a class="headerlink" href="#third-party-docs" title="Permalink to this headline">¶</a></h2>
+<p>The original unmodified version of this module&#8217;s code can be found here: <a class="reference external" href="https://github.com/dclambert/Python-ELM">Extreme Learning Machines</a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="kernel_sgd.html" class="btn btn-neutral float-right" title="Kernel SGD" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sparse_filtering.html" class="btn btn-neutral" title="Sparse Filtering" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Will McGinnis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
