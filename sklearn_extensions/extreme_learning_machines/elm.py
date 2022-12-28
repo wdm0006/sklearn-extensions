@@ -238,7 +238,7 @@ class GenELMClassifier(BaseELM, ClassifierMixin):
         (default=MLPRandomLayer(random_state=0))
 
     `binarizer` : LabelBinarizer, optional
-        (default=LabelBinarizer(-1, 1))
+        (default=LabelBinarizer(neg_label=-1, pos_label=1))
 
     `regressor`    : regressor instance, optional (default=None)
         If provided, this object is used to perform the regression from hidden
@@ -264,7 +264,8 @@ class GenELMClassifier(BaseELM, ClassifierMixin):
               Theory and Applications", Neurocomputing, vol. 70, pp. 489-501,
               2006.
     """
-    def __init__(self, hidden_layer=MLPRandomLayer(random_state=0), binarizer=LabelBinarizer(-1, 1), regressor=None):
+    def __init__(self, hidden_layer=MLPRandomLayer(random_state=0),
+                 binarizer=LabelBinarizer(neg_label=-1, pos_label=1), regressor=None):
         """
 
         :param hidden_layer:
@@ -538,7 +539,8 @@ class ELMClassifier(ELMRegressor):
     """
 
     def __init__(self, n_hidden=20, alpha=0.5, rbf_width=1.0, activation_func='tanh', activation_args=None,
-                 user_components=None, regressor=None, binarizer=LabelBinarizer(-1, 1), random_state=None):
+                 user_components=None, regressor=None, binarizer=LabelBinarizer(neg_label=-1, pos_label=1),
+                 random_state=None):
 
         super(ELMClassifier, self).__init__(n_hidden=n_hidden,
                                             alpha=alpha,
